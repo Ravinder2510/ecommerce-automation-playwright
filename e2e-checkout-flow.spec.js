@@ -3,27 +3,31 @@ const { test, expect } = require('@playwright/test');
 test('E-Commerce End to End Checkout Flow', async ({ page }) => {
   // 1. Go to the website
   await page.goto('https://saucedemo.com');
-
+  await page.waitForTimeout(3000);
+  
   // 2. Log in automatically
   await page.locator('[data-test="username"]').fill('standard_user');
   await page.locator('[data-test="password"]').fill('secret_sauce');
   await page.locator('[data-test="login-button"]').click();
+  await page.waitForTimeout(3000);
 
   // 3. Verify user landed on products page
-  await expect(page).toHaveURL('https://saucedemo.com/inventory.html');
+  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
   // 4. Add an item to the cart
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
-
+  await page.waitForTimeout(3000);
   // 5. Go to checkout and fill details
   await page.locator('[data-test="shopping-cart-link"]').click();
   await page.locator('[data-test="checkout"]').click();
   await page.locator('[data-test="firstName"]').fill('John');
   await page.locator('[data-test="lastName"]').fill('Doe');
   await page.locator('[data-test="postalCode"]').fill('12345');
+  await page.waitForTimeout(3000);
   await page.locator('[data-test="continue"]').click();
-
+  await page.waitForTimeout(3000);
   // 6. Finish checkout and verify success message
   await page.locator('[data-test="finish"]').click();
   await expect(page.locator('[data-test="complete-header"]')).toHaveText('Thank you for your order!');
+  await page.waitForTimeout(3000);
 });
