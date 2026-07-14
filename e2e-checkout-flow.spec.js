@@ -17,6 +17,7 @@ test('E-Commerce End to End Checkout Flow', async ({ page }) => {
   // 4. Add an item to the cart
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
   await page.waitForTimeout(3000);
+  
   // 5. Go to checkout and fill details
   await page.locator('[data-test="shopping-cart-link"]').click();
   await page.locator('[data-test="checkout"]').click();
@@ -26,6 +27,7 @@ test('E-Commerce End to End Checkout Flow', async ({ page }) => {
   await page.waitForTimeout(3000);
   await page.locator('[data-test="continue"]').click();
   await page.waitForTimeout(3000);
+  
   // 6. Finish checkout and verify success message
   await page.locator('[data-test="finish"]').click();
   await expect(page.locator('[data-test="complete-header"]')).toHaveText('Thank you for your order!');
