@@ -10,7 +10,7 @@ test('E-Commerce End to End Checkout Flow', async ({ page }) => {
   await page.locator('[data-test="login-button"]').click();
 
   // 3. Verify user landed on products page
-  await expect(page).toHaveURL('https://saucedemo.com');
+  await expect(page).toHaveURL('https://saucedemo.com/inventory.html');
 
   // 4. Add an item to the cart
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
