@@ -1,3 +1,9 @@
+// =========================================================================================
+// E-COMMERCE WEB END-TO-END FLOW REGRESSION ENGINE
+// This script automates user authentication, cart management, and transaction completion 
+// states on a web architecture using Playwright.
+// =========================================================================================
+
 const { test, expect } = require('@playwright/test');
 
 test('E-Commerce End to End Checkout Flow', async ({ page }) => {
