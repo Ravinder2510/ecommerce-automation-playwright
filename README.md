@@ -2,7 +2,7 @@
 
 ## 📊 Project Test Execution Status
 
-| Testing Phase | Scope | Tools Used | Verification Artifact | Status |
+| Testing Phase | Scope | Tools Used | Verification Artifact |
 
 | Phase 1: Manual | 24 Functional & Edge-Case Scenarios | Google Sheets | (https://docs.google.com/spreadsheets/d/1BsBC-oGvWyypU8xpqEtXjllGbvR0pLYU1Bdu66QSgmQ/edit?usp=sharing) | 
 
